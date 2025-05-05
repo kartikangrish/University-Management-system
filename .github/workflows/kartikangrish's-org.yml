@@ -1,0 +1,13 @@
+name: kartikangrish's Org
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run scheduled command
+        run: npm run backup
